@@ -127,7 +127,7 @@ class AdminController extends Controller
             'actionurl' => $request->actionurl,
             'endpart' => $request->endpart
         ];
-        Notification::send($data, new SendEmailNotification($details));
+        //Notification::send($data, new SendEmailNotification($details));
         return redirect()->back();
     }
 }
