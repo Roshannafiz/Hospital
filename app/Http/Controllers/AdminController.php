@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Appointment;
+use App\Models\Blog;
 use App\Models\Doctor;
 use App\Notifications\SendEmailNotification;
 use Illuminate\Http\Request;
@@ -117,6 +118,7 @@ class AdminController extends Controller
         return view('admin.email_view', compact('data'));
     }
 
+    /*
     public function sendemail(Request $request, $id)
     {
         $data = Appointment::find($id);
@@ -130,5 +132,27 @@ class AdminController extends Controller
         Notification::send($data, new SendEmailNotification($details));
         return redirect()->back();
 
+    }
+    */
+
+    public function addblog()
+    {
+        return view('admin.add_blog');
+    }
+
+    public function uploadblog(Request $request)
+    {
+        $blog = new Blog();
+
+        $image = $request->file;
+        $imagename = time() . '.' . $image->getClientOriginalExtension();
+        $request->file->move('blogimage', $imagename);
+        $blog->image = $imagename;
+
+        $blog->category = $request->category;
+        $blog->title = $request->title;
+        $blog->authorname = $request->authorname;
+        $blog->save();
+        return redirect()->back()->with('message', "Blog Added Successfully!");
     }
 }

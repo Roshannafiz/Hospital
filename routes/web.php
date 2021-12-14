@@ -48,8 +48,14 @@ Route::get('/deletedoctor/{id}', [AdminController::class, 'deletedoctor']);
 Route::get('/updatedoctor/{id}', [AdminController::class, 'updatedoctor']);
 
 Route::post('/editdoctor/{id}', [AdminController::class, 'editdoctor']);
-Route::get('/emailview/{id}', [AdminController::class, 'emailview']);
+Route::get('/add_blog', [AdminController::class, 'addblog']);
 
+Route::post('/upload_blog', [AdminController::class, 'uploadblog']);
+
+
+
+//_____________ For Email Route___
+Route::get('/emailview/{id}', [AdminController::class, 'emailview']);
 Route::post('/sendemail/{id}', [AdminController::class, 'sendemail']);
 
 
