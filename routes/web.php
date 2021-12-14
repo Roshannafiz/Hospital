@@ -51,6 +51,15 @@ Route::post('/editdoctor/{id}', [AdminController::class, 'editdoctor']);
 Route::get('/add_blog', [AdminController::class, 'addblog']);
 
 Route::post('/upload_blog', [AdminController::class, 'uploadblog']);
+Route::get('/show_blog', [AdminController::class, 'showblog']);
+
+Route::get('/deleteblog/{id}', [AdminController::class, 'deleteblog']);
+Route::get('/updateblog/{id}', [AdminController::class, 'updateblog']);
+
+Route::post('/editblog/{id}', [AdminController::class, 'editblog']);
+Route::get('/active/{id}', [AdminController::class, 'active']);
+
+Route::get('/inactive/{id}', [AdminController::class, 'inactive']);
 
 
 

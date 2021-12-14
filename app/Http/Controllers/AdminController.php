@@ -64,6 +64,22 @@ class AdminController extends Controller
         return redirect()->back();
     }
 
+    public function active($id)
+    {
+        $data = Blog::find($id);
+        $data->status = 'Active';
+        $data->save();
+        return redirect()->back();
+    }
+
+    public function inactive($id)
+    {
+        $data = Blog::find($id);
+        $data->status = 'InActive';
+        $data->save();
+        return redirect()->back();
+    }
+
     public function cancel($id)
     {
         $data = Appointment::find($id);
@@ -152,7 +168,45 @@ class AdminController extends Controller
         $blog->category = $request->category;
         $blog->title = $request->title;
         $blog->authorname = $request->authorname;
+        $blog->status = 'Active';
         $blog->save();
         return redirect()->back()->with('message', "Blog Added Successfully!");
+    }
+
+    public function showblog()
+    {
+        $blog_datas = Blog::all();
+        return view('admin.show_blog', compact('blog_datas'));
+    }
+
+    public function deleteblog($id)
+    {
+        $data = Blog::find($id);
+        $data->delete();
+        return redirect()->back();
+    }
+
+    public function updateblog($id)
+    {
+        $data = Blog::find($id);
+        return view('admin.update_blog', compact('data'));
+    }
+
+    public function editblog(Request $request, $id)
+    {
+        $blog = Blog::find($id);
+
+        $blog->category = $request->category;
+        $blog->title = $request->title;
+        $blog->authorname = $request->authorname;
+
+        $image = $request->file;
+        if ($image) {
+            $imagename = time() . '.' . $image->getClientOriginalExtension();
+            $request->file->move('blogimage', $imagename);
+            $blog->image = $imagename;
+        }
+        $blog->save();
+        return redirect('show_blog')->with('message', "Blog Updated Successfully!");
     }
 }

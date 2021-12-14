@@ -17,7 +17,7 @@
         @include('user.include.topbar')
         <!-------- Include topbar ------------->
 
-        
+
         <!----------- Include navbar ------------>
         @include('user.include.navbar')
         <!----------- Include navbar ------------>
@@ -39,7 +39,7 @@
 
     <div class="page-section">
         <div class="container">
-            <h1 class="text-center wow fadeInUp">Get in Touch</h1>
+            <h1 class="text-center wow fadeInUp" style="font-size: 2.5em !important">Get in Touch</h1>
 
             <form class="contact-form mt-5">
                 <div class="row mb-3">

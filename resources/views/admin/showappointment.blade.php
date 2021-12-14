@@ -21,7 +21,7 @@
 
         <!-- partial -->
         <div class="container-fluid page-body-wrapper">
-            <div class="container" style="text-align: center; padding-top: 100px">
+            <div class="container" style="text-align: left; padding-top: 100px">
                 <table class="table table-dark table-bordered">
                     <tr>
                         <th style="background: black; font-size: 17px; color: white">Customar Name</th>

@@ -73,7 +73,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 wow fadeInUp">
-                    <h1 class="text-center mb-3">Welcome to Your Health Center</h1>
+                    <h1 class="text-center mb-3" style="font-size: 2.5em !important">Welcome to Your Health Center</h1>
                     <div class="text-lg">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt neque sit, explicabo vero
                             nulla animi nemo quae cumque, eaque pariatur eum ut maxime! Tenetur aperiam maxime iure
@@ -88,7 +88,7 @@
                     </div>
                 </div>
                 <div class="col-lg-10 mt-5">
-                    <h1 class="text-center mb-5 wow fadeInUp">Our Doctors</h1>
+                    <h1 class="text-center mb-5 wow fadeInUp" style="font-size: 2.5em !important">Our Doctors</h1>
                     <div class="row justify-content-center">
                         @foreach ($doctor as $doctors)
                             <div class="col-md-6 col-lg-4 wow zoomIn">

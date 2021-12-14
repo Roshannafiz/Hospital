@@ -76,7 +76,7 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6 py-3 wow fadeInUp">
-                        <h1>Welcome to Your Health <br> Center</h1>
+                        <h1 style="font-size: 2.5em !important">Welcome to Your Health <br> Center</h1>
                         <p class="text-grey mb-4">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
                             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
                             vero eos et accusam et justo duo dolores et ea rebum. Accusantium aperiam earum ipsa eius,

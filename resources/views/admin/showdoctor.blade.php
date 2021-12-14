@@ -21,7 +21,7 @@
 
         <!-- partial -->
         <div class="container-fluid page-body-wrapper">
-            <div class="container" style="text-align: center; padding-top: 100px">
+            <div class="container" style="text-align: left; padding-top: 100px">
                 <table class="table table-dark table-bordered">
                     <tr>
                         <th style="background: black; font-size: 17px; color: white">Doctor Name</th>
@@ -39,14 +39,17 @@
                             <td>{{ $doctor->speciality }}</td>
                             <td>{{ $doctor->room }}</td>
                             <td>
-                                <img style="height: 50px; width: 70px; border-radius: 0px" src="doctorimage/{{ $doctor->image }}" alt="Doctor Image">
+                                <img style="height: 50px; width: 70px; border-radius: 0px"
+                                    src="doctorimage/{{ $doctor->image }}" alt="Doctor Image">
                             </td>
                             <td>
-                                <a href="{{ url('deletedoctor',$doctor->id) }}" onclick="return confirm('Are You Sure To Delete This Doctor?')" class="btn btn-danger">Delete</a>
+                                <a href="{{ url('deletedoctor', $doctor->id) }}"
+                                    onclick="return confirm('Are You Sure To Delete This Doctor?')"
+                                    class="btn" style="background: red">Delete</a>
                             </td>
 
                             <td>
-                                <a href="{{ url('updatedoctor',$doctor->id) }}" class="btn btn-primary">Update</a>
+                                <a href="{{ url('updatedoctor', $doctor->id) }}" class="btn btn-primary">Update</a>
                             </td>
                         </tr>
                     @endforeach

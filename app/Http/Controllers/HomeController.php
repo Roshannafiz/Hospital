@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Appointment;
+use App\Models\Blog;
 use App\Models\Doctor;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -15,8 +16,9 @@ class HomeController extends Controller
     {
         if (Auth::id()) {
             if (Auth::user()->usertype == '0') {
-                $doctor = Doctor::all();
-                return view('user.home', compact('doctor'));
+                $doctor = Doctor::limit(3)->get();
+                $blogs = Blog::orderBy('id', 'DESC')->limit(3)->where('status', 'Active')->get();
+                return view('user.home', compact('doctor', 'blogs'));
             } else {
                 return view('admin.home');
             }
@@ -32,7 +34,8 @@ class HomeController extends Controller
             return redirect('home');
         } else {
             $doctor = Doctor::limit(3)->get();
-            return view('user.home', compact('doctor'));
+            $blogs = Blog::orderBy('id', 'DESC')->limit(3)->where('status', 'Active')->get();
+            return view('user.home', compact('doctor', 'blogs'));
         }
     }
 
@@ -53,7 +56,8 @@ class HomeController extends Controller
     //__________ News /Blog page view...
     public function blog()
     {
-        return view('user.blog');
+        $blogs = Blog::orderBy('id', 'DESC')->where('status', 'Active')->get();
+        return view('user.blog', compact('blogs'));
     }
 
     //__________ News /Blog page view...
