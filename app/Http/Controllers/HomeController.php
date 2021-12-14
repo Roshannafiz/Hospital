@@ -36,10 +36,10 @@ class HomeController extends Controller
         }
     }
 
-    //__________ About page view...
-    public function about()
+    //__________ About Us page view...
+    public function aboutus()
     {
-        return view('user.about');
+        return view('user.aboutus');
     }
 
     //__________ Doctor page view...

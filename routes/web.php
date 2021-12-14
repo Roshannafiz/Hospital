@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 //_______________________ All Frontend View __________________//
 Route::get('/', [HomeController::class, 'index']);
-Route::get('/about', [HomeController::class, 'about']);
+Route::get('/aboutus', [HomeController::class, 'aboutus']);
 Route::get('/doctors', [HomeController::class, 'doctors']);
 Route::get('/blog', [HomeController::class, 'blog']);
 Route::get('/contact', [HomeController::class, 'contact']);
