@@ -129,5 +129,6 @@ class AdminController extends Controller
         ];
         Notification::send($data, new SendEmailNotification($details));
         return redirect()->back();
+
     }
 }

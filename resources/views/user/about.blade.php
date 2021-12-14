@@ -9,7 +9,7 @@
 
     <meta name="copyright" content="MACode ID, https://macodeid.com/">
 
-    <title>One Health - Medical Center</title>
+    <title>One Health - Medical Center HTML5 Template</title>
 
     <link rel="stylesheet" href="../assets/css/maicons.css">
 
@@ -71,10 +71,10 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupport">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
+                        <li class="nav-item">
                             <a class="nav-link" href="{{ url('/') }}">Home</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item active">
                             <a class="nav-link" href="{{ url('/about') }}">About Us</a>
                         </li>
                         <li class="nav-item">
@@ -89,7 +89,8 @@
                         @if (Route::has('login'))
                             @auth
                                 <li class="nav-item">
-                                    <a href="{{ url('myappointment') }}" class="nav-link" style="background: greenyellow; color: honeydew">My Appointment</a>
+                                    <a href="{{ url('myappointment') }}" class="nav-link"
+                                        style="background: greenyellow; color: honeydew">My Appointment</a>
                                 </li>
                                 <x-app-layout>
 
@@ -110,86 +111,123 @@
         </nav>
     </header>
 
-    @if (session()->has('message'))
-        <div class="alert alert-success">
-            <button type="button" class="close" data-dismiss="alert">x</button>
-            {{ session()->get('message') }}
-        </div>
-    @endif
+    <div class="page-banner overlay-dark bg-image" style="background-image: url(../assets/img/bg_image_1.jpg);">
+        <div class="banner-section">
+            <div class="container text-center wow fadeInUp">
+                <nav aria-label="Breadcrumb">
+                    <ol class="breadcrumb breadcrumb-dark bg-transparent justify-content-center py-0 mb-2">
+                        <li class="breadcrumb-item"><a href="{{ url('/') }}">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">About</li>
+                    </ol>
+                </nav>
+                <h1 class="font-weight-normal">About Us</h1>
+            </div> <!-- .container -->
+        </div> <!-- .banner-section -->
+    </div> <!-- .page-banner -->
 
-    <div class="page-hero bg-image overlay-dark" style="background-image: url(../assets/img/bg_image_1.jpg);">
-        <div class="hero-section">
-            <div class="container text-center wow zoomIn">
-                <span class="subhead">Let's make your life happier</span>
-                <h1 class="display-4">Healthy Living</h1>
-                <a href="#" class="btn btn-primary">Let's Consult</a>
+    <div class="page-section bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 py-3 wow zoomIn">
+                    <div class="card-service">
+                        <div class="circle-shape bg-secondary text-white">
+                            <span class="mai-chatbubbles-outline"></span>
+                        </div>
+                        <p><span>Chat</span> with a doctors</p>
+                    </div>
+                </div>
+                <div class="col-md-4 py-3 wow zoomIn">
+                    <div class="card-service">
+                        <div class="circle-shape bg-primary text-white">
+                            <span class="mai-shield-checkmark"></span>
+                        </div>
+                        <p><span>One</span>-Health Protection</p>
+                    </div>
+                </div>
+                <div class="col-md-4 py-3 wow zoomIn">
+                    <div class="card-service">
+                        <div class="circle-shape bg-accent text-white">
+                            <span class="mai-basket"></span>
+                        </div>
+                        <p><span>One</span>-Health Pharmacy</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
+    <div class="page-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 wow fadeInUp">
+                    <h1 class="text-center mb-3">Welcome to Your Health Center</h1>
+                    <div class="text-lg">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt neque sit, explicabo vero
+                            nulla animi nemo quae cumque, eaque pariatur eum ut maxime! Tenetur aperiam maxime iure
+                            explicabo aut consequuntur. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Nesciunt neque sit, explicabo vero nulla animi nemo quae cumque, eaque pariatur eum ut
+                            maxime! Tenetur aperiam maxime iure explicabo aut consequuntur.</p>
+                        <p>Expedita iusto sunt beatae esse id nihil voluptates magni, excepturi distinctio impedit illo,
+                            incidunt iure facilis atque, inventore reprehenderit quidem aliquid recusandae. Lorem ipsum
+                            dolor sit amet consectetur adipisicing elit. Laudantium quod ad sequi atque accusamus
+                            deleniti placeat dignissimos illum nulla voluptatibus vel optio, molestiae dolore velit iste
+                            maxime, nobis odio molestias!</p>
+                    </div>
+                </div>
+                <div class="col-lg-10 mt-5">
+                    <h1 class="text-center mb-5 wow fadeInUp">Our Doctors</h1>
+                    <div class="row justify-content-center">
+                        <div class="col-md-6 col-lg-4 wow zoomIn">
+                            <div class="card-doctor">
+                                <div class="header">
+                                    <img src="../assets/img/doctors/doctor_1.jpg" alt="">
+                                    <div class="meta">
+                                        <a href="#"><span class="mai-call"></span></a>
+                                        <a href="#"><span class="mai-logo-whatsapp"></span></a>
+                                    </div>
+                                </div>
+                                <div class="body">
+                                    <p class="text-xl mb-0">Dr. Stein Albert</p>
+                                    <span class="text-sm text-grey">Cardiology</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 wow zoomIn">
+                            <div class="card-doctor">
+                                <div class="header">
+                                    <img src="../assets/img/doctors/doctor_2.jpg" alt="">
+                                    <div class="meta">
+                                        <a href="#"><span class="mai-call"></span></a>
+                                        <a href="#"><span class="mai-logo-whatsapp"></span></a>
+                                    </div>
+                                </div>
+                                <div class="body">
+                                    <p class="text-xl mb-0">Dr. Alexa Melvin</p>
+                                    <span class="text-sm text-grey">Dental</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 wow zoomIn">
+                            <div class="card-doctor">
+                                <div class="header">
+                                    <img src="../assets/img/doctors/doctor_3.jpg" alt="">
+                                    <div class="meta">
+                                        <a href="#"><span class="mai-call"></span></a>
+                                        <a href="#"><span class="mai-logo-whatsapp"></span></a>
+                                    </div>
+                                </div>
+                                <div class="body">
+                                    <p class="text-xl mb-0">Dr. Rebecca Steffany</p>
+                                    <span class="text-sm text-grey">General Health</span>
+                                </div>
+                            </div>
+                        </div>
 
-    <div class="bg-light">
-        <div class="page-section py-3 mt-md-n5 custom-index">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-4 py-3 py-md-0">
-                        <div class="card-service wow fadeInUp">
-                            <div class="circle-shape bg-secondary text-white">
-                                <span class="mai-chatbubbles-outline"></span>
-                            </div>
-                            <p><span>Chat</span> with a doctors</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 py-3 py-md-0">
-                        <div class="card-service wow fadeInUp">
-                            <div class="circle-shape bg-primary text-white">
-                                <span class="mai-shield-checkmark"></span>
-                            </div>
-                            <p><span>One</span>-Health Protection</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 py-3 py-md-0">
-                        <div class="card-service wow fadeInUp">
-                            <div class="circle-shape bg-accent text-white">
-                                <span class="mai-basket"></span>
-                            </div>
-                            <p><span>One</span>-Health Pharmacy</p>
-                        </div>
                     </div>
                 </div>
             </div>
-        </div> <!-- .page-section -->
-
-        <div class="page-section pb-0">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 py-3 wow fadeInUp">
-                        <h1>Welcome to Your Health <br> Center</h1>
-                        <p class="text-grey mb-4">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-                            vero eos et accusam et justo duo dolores et ea rebum. Accusantium aperiam earum ipsa eius,
-                            inventore nemo labore eaque porro consequatur ex aspernatur. Explicabo, excepturi
-                            accusantium! Placeat voluptates esse ut optio facilis!</p>
-                        <a href="about.html" class="btn btn-primary">Learn More</a>
-                    </div>
-                    <div class="col-lg-6 wow fadeInRight" data-wow-delay="400ms">
-                        <div class="img-place custom-img-1">
-                            <img src="../assets/img/bg-doctor.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> <!-- .bg-light -->
-    </div> <!-- .bg-light -->
-
-    <!------- Include Doctor ---->
-    @include('user.doctor')
-
-    <!------- Include Latest ---->
-    @include('user.latest')
-
-    <!------- Include Appointment ----->
-    @include('user.appointment')
+        </div>
+    </div>
 
     <div class="page-section banner-home bg-image" style="background-image: url(../assets/img/banner-pattern.svg);">
         <div class="container py-5 py-lg-0">

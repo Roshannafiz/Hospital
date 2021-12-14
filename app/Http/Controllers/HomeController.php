@@ -36,6 +36,30 @@ class HomeController extends Controller
         }
     }
 
+    //__________ About page view...
+    public function about()
+    {
+        return view('user.about');
+    }
+
+    //__________ Doctor page view...
+    public function doctors()
+    {
+        return view('user.doctors');
+    }
+
+    //__________ News /Blog page view...
+    public function blog()
+    {
+        return view('user.blog');
+    }
+
+    //__________ News /Blog page view...
+    public function contact()
+    {
+        return view('user.contact');
+    }
+
     public function appointment(Request $request)
     {
         $data = new Appointment();
