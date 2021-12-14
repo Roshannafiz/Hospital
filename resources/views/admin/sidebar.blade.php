@@ -60,35 +60,84 @@
               <li class="nav-item nav-category">
                   <span class="nav-link">Navigation</span>
               </li>
-
               <li class="nav-item menu-items">
-                  <a class="nav-link"
-                      href="{{ url('add_doctor_view') }}">
+                  <a class="nav-link" href="javascript:avoid(0)">
                       <span class="menu-icon">
-                          <i class="mdi mdi-file-document-box"></i>
+                          <i class="mdi mdi-speedometer"></i>
                       </span>
-                      <span class="menu-title">Add Doctors</span>
+                      <span class="menu-title">Dashboard</span>
                   </a>
               </li>
 
               <li class="nav-item menu-items">
-                <a class="nav-link"
-                    href="{{ url('showappointment') }}">
-                    <span class="menu-icon">
-                        <i class="mdi mdi-file-document-box"></i>
-                    </span>
-                    <span class="menu-title">Appointments</span>
-                </a>
-            </li>
+                  <a class="nav-link" href="{{ url('showappointment') }}">
+                      <span class="menu-icon">
+                          <i class="mdi mdi-file-document-box"></i>
+                      </span>
+                      <span class="menu-title">Appointments</span>
+                  </a>
+              </li>
 
-            <li class="nav-item menu-items">
-                <a class="nav-link"
-                    href="{{ url('showdoctor') }}">
-                    <span class="menu-icon">
-                        <i class="mdi mdi-file-document-box"></i>
-                    </span>
-                    <span class="menu-title">All Doctors</span>
-                </a>
-            </li>
+              <li class="nav-item menu-items">
+                  <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false"
+                      aria-controls="ui-basic">
+                      <span class="menu-icon">
+                          <i class="mdi mdi-laptop"></i>
+                      </span>
+                      <span class="menu-title">Doctors</span>
+                      <i class="menu-arrow"></i>
+                  </a>
+                  <div class="collapse" id="ui-basic">
+                      <ul class="nav flex-column sub-menu">
+
+                          <li class="nav-item menu-items">
+                              <a class="nav-link" href="{{ url('add_doctor_view') }}">
+                                  <span class="menu-icon">
+                                      <i class="mdi mdi-file-document-box"></i>
+                                  </span>
+                                  <span class="menu-title">Add Doctors</span>
+                              </a>
+                          </li>
+
+                          <li class="nav-item menu-items">
+                              <a class="nav-link" href="{{ url('showdoctor') }}">
+                                  <span class="menu-icon">
+                                      <i class="mdi mdi-file-document-box"></i>
+                                  </span>
+                                  <span class="menu-title">All Doctors</span>
+                              </a>
+                          </li>
+                      </ul>
+                  </div>
+              </li>
+
+              <li class="nav-item menu-items">
+                  <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false"
+                      aria-controls="auth">
+                      <span class="menu-icon">
+                          <i class="mdi mdi-security"></i>
+                      </span>
+                      <span class="menu-title">Blog</span>
+                      <i class="menu-arrow"></i>
+                  </a>
+                  <div class="collapse" id="auth">
+                      <ul class="nav flex-column sub-menu">
+                          <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html">
+                                  <span class="menu-icon">
+                                      <i class="mdi mdi-file-document-box"></i>
+                                  </span>
+                                  Add Blog
+                              </a>
+                          </li>
+                          <li class="nav-item"> <a class="nav-link" href="pages/samples/error-404.html">
+                                  <span class="menu-icon">
+                                      <i class="mdi mdi-file-document-box"></i>
+                                  </span>
+                                  All Blog
+                              </a>
+                          </li>
+                      </ul>
+                  </div>
+              </li>
           </ul>
       </nav>

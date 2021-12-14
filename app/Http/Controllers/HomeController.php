@@ -31,7 +31,7 @@ class HomeController extends Controller
         if (Auth::id()) {
             return redirect('home');
         } else {
-            $doctor = Doctor::all();
+            $doctor = Doctor::limit(3)->get();
             return view('user.home', compact('doctor'));
         }
     }
@@ -39,13 +39,15 @@ class HomeController extends Controller
     //__________ About Us page view...
     public function aboutus()
     {
-        return view('user.aboutus');
+        $doctor = Doctor::orderBy('id', 'DESC')->limit(6)->get();
+        return view('user.aboutus', compact('doctor'));
     }
 
     //__________ Doctor page view...
     public function doctors()
     {
-        return view('user.doctors');
+        $doctor = Doctor::all();
+        return view('user.doctors', compact('doctor'));
     }
 
     //__________ News /Blog page view...
